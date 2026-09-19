@@ -1427,7 +1427,7 @@ body {
   z-index: 40;
   opacity: 0;
   animation: fadeIn 1s forwards;
-  animation-delay: 2.6s;
+  animation-delay: 0.8s;
   max-width: 94vw;
 }
 .time-title {
@@ -1437,6 +1437,13 @@ body {
   letter-spacing: 0.04em;
   margin-bottom: clamp(14px, 4vmin, 28px);
   text-shadow: 0 0 24px rgba(252, 231, 0, 0.4);
+}
+.time-love {
+  color: #fff;
+  font-size: clamp(16px, min(4.4vmin, 3.6vw), 30px);
+  font-weight: 700;
+  margin: -8px 0 clamp(18px, 5vmin, 30px);
+  text-shadow: 0 0 22px rgba(255, 160, 200, 0.6);
 }
 .time-grid {
   display: flex;
