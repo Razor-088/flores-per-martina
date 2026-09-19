@@ -78,6 +78,24 @@ body {
   }
 }
 
+.message-sub {
+  position: absolute;
+  top: calc(100px + env(safe-area-inset-top));
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(14px, min(4vmin, 3.2vw), 24px);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-align: center;
+  text-shadow: 0 0 18px rgba(255, 215, 0, 0.55);
+  white-space: nowrap;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  animation-delay: 2.4s;
+}
+
 .flower--1 {
   -webkit-animation: moving-flower-1 4s linear infinite;
           animation: moving-flower-1 4s linear infinite;
@@ -1414,6 +1432,10 @@ body {
     top: calc(12px + env(safe-area-inset-top));
     font-size: clamp(14px, 4vmin, 18px);
     padding: 8px 16px;
+  }
+  .message-sub {
+    top: calc(58px + env(safe-area-inset-top));
+    font-size: 12px;
   }
 }
 
