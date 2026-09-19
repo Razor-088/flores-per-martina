@@ -53,19 +53,20 @@ body {
 
 .message {
   background: #fce700;
-  bottom: calc(12px + env(safe-area-inset-bottom));
+  top: calc(28px + env(safe-area-inset-top));
   left: 50%;
   transform: translateX(-50%);
   max-width: 92vw;
   font-family: "Poppins", sans-serif;
-  font-size: clamp(15px, min(4.2vmin, 3.2vw), 40px);
+  font-size: clamp(16px, min(5vmin, 4vw), 40px);
   font-style: normal;
   font-weight: 800;
-  min-height: 60px;
-  line-height: 1.15;
-  padding: 10px 16px;
+  line-height: 1.2;
+  padding: 12px 20px;
+  border-radius: 999px;
   position: absolute;
   text-align: center;
+  box-shadow: 0 0 24px rgba(252, 231, 0, 0.35);
   opacity: 0;
   animation: fadeIn 1s forwards;
   animation-delay: 2s;
@@ -1379,7 +1380,7 @@ body {
 
 .btn-next {
   position: absolute;
-  bottom: calc(150px + env(safe-area-inset-bottom));
+  bottom: calc(80px + env(safe-area-inset-bottom));
   left: 50%;
   transform: translateX(-50%);
   font-family: "Poppins", sans-serif;
@@ -1410,6 +1411,8 @@ body {
     bottom: calc(12px + env(safe-area-inset-bottom));
   }
   .message {
-    bottom: calc(84px + env(safe-area-inset-bottom));
+    top: calc(12px + env(safe-area-inset-top));
+    font-size: clamp(14px, 4vmin, 18px);
+    padding: 8px 16px;
   }
 }
