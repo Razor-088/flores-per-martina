@@ -15,6 +15,7 @@ body {
   align-items: flex-end;
   justify-content: center;
   min-height: 100vh;
+  min-height: 100dvh;
   background-color: var(--dark-color);
   overflow: hidden;
   perspective: 1000px;
@@ -52,15 +53,19 @@ body {
 
 .message {
   background: #fce700;
-  bottom: 50px;
+  bottom: calc(12px + env(safe-area-inset-bottom));
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 92vw;
   font-family: "Poppins", sans-serif;
-  font-size: 40px;
+  font-size: clamp(15px, min(4.2vmin, 3.2vw), 40px);
   font-style: normal;
   font-weight: 800;
-  height: 60px;
-  line-height: 1;
-  padding: 10px;
+  min-height: 60px;
+  line-height: 1.15;
+  padding: 10px 16px;
   position: absolute;
+  text-align: center;
   opacity: 0;
   animation: fadeIn 1s forwards;
   animation-delay: 2s;
@@ -1374,24 +1379,37 @@ body {
 
 .btn-next {
   position: absolute;
-  bottom: 170px;
+  bottom: calc(150px + env(safe-area-inset-bottom));
   left: 50%;
   transform: translateX(-50%);
   font-family: "Poppins", sans-serif;
-  font-size: 18px;
+  font-size: clamp(14px, 3.4vmin, 18px);
   font-weight: 700;
   color: #1a1a00;
   background: #fce700;
   border: none;
   border-radius: 999px;
-  padding: 14px 34px;
+  padding: clamp(11px, 2.6vmin, 14px) clamp(26px, 6vmin, 34px);
   cursor: pointer;
   text-decoration: none;
   z-index: 50;
+  white-space: nowrap;
   box-shadow: 0 0 20px rgba(252, 231, 0, 0.35);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 .btn-next:hover {
   transform: translateX(-50%) scale(1.06);
   box-shadow: 0 0 30px rgba(252, 231, 0, 0.6);
+}
+
+@media (max-height: 480px) {
+  .flowers {
+    transform: scale(0.55);
+  }
+  .btn-next {
+    bottom: calc(12px + env(safe-area-inset-bottom));
+  }
+  .message {
+    bottom: calc(84px + env(safe-area-inset-bottom));
+  }
 }
