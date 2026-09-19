@@ -1438,13 +1438,6 @@ body {
   margin-bottom: clamp(14px, 4vmin, 28px);
   text-shadow: 0 0 24px rgba(252, 231, 0, 0.4);
 }
-.time-love {
-  color: #fff;
-  font-size: clamp(16px, min(4.4vmin, 3.6vw), 30px);
-  font-weight: 700;
-  margin: -8px 0 clamp(18px, 5vmin, 30px);
-  text-shadow: 0 0 22px rgba(255, 160, 200, 0.6);
-}
 .time-grid {
   display: flex;
   justify-content: center;
@@ -1477,11 +1470,11 @@ body {
   letter-spacing: 0.12em;
 }
 .time-foot {
-  margin-top: clamp(14px, 4vmin, 26px);
+  margin-top: clamp(16px, 4.4vmin, 28px);
   color: #fff;
-  font-size: clamp(13px, 3vmin, 18px);
-  font-weight: 400;
-  text-shadow: 0 0 14px rgba(255, 215, 0, 0.35);
+  font-size: clamp(18px, min(5vmin, 4vw), 34px);
+  font-weight: 700;
+  text-shadow: 0 0 26px rgba(255, 140, 200, 0.75);
 }
 @media (max-height: 480px) {
   .time-panel {
